@@ -8,6 +8,8 @@ if [ ! -f ${OPENSHIFT_DATA_DIR}/virtenv/bin/python ]
 then
     echo "Setting up virtualenv"
     virtualenv --no-site-packages ${OPENSHIFT_DATA_DIR}/virtenv
+    ${OPENSHIFT_DATA_DIR}/virtenv/bin/pip install distribute
+
 fi
 
 if [ ! -f ${OPENSHIFT_REPO_DIR}/bin/buildout ]
